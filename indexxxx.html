@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hotel  Patagonia</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<head>
+<body>
+    <ul>
+      <li>
+          <div class="container">
+             <h5>Contactanos  +54-2966679502</h5>
+          </div>
+          <div class="logo">
+            <h1> <strong>Hotel Patagonia</strong> </h1>
+            <img class="fotito" src="../logoOk.png" alt="80%">
+          </div>
+      </li>
+    </ul>
+        
+</body>
+</head>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img class="fotitoportada" src="../Proyecto final multimedial/assets/img/Portada.jpg">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="../Proyecto final multimedial/assets/img/afuera.jpg" style="width:100%">
+    <div class="text">Nuestro Hotel</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="../Proyecto final multimedial/assets/img/habitaciones.jpg" style="width:100%">
+    <div class="text">Habitaciones</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+<div class="topnav" id="myTopnav">
+        <a href="../Proyecto final multimedial/sections/Habitaciones.html"> Habitaciones</a>
+        <a href="../Proyecto final multimedial/sections/Restaurante.html">Restaurante</a>
+        <a href="../Proyecto final multimedial/sections/Spa y healthclub.html">Spa y healthclub</a>
+        <a href="../Proyecto final multimedial/sections/Ubicacion.html">Ubicacion</a>
+        <a href="../Proyecto final multimedial/sections/Consultas.html">Consultas</a>
+        <a href="../Proyecto final multimedial/sections/Eventos.html">Eventos</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      
+      <div style="padding-left:16px">
+        <h2>Hotel Patagonia</h2>
+        <p>yuyhly.</p>
+      </div>
+      
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+<p>Probando ndeah</p>
+</html>
